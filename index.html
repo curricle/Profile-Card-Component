@@ -1,35 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+      background: hsl(185, 75%, 39%);  
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
+      background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+      background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+      background-repeat: no-repeat;
+      
+      font-size: 18px;
+      font-family: 'Kumbh Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: hsl(229, 23%, 23%);
+    }
+
+    @media (orientation: portrait) {
+      body {
+        background-size: 100vh 100vh;
+      }
+    }
+
+    @media (orientation: landscape) {
+      body {
+        background-size: 100vw 100vw;
+      }
+    }
+
+    .profile-card {
+      background: white;
+      width: 325px;
+      border-radius: 10px;
+      box-shadow: 0 0 50px hsl(185, 75%, 39%);
+    }
+
+    .profile-header-image {
+      height: 150px;
+      background: url('images/bg-pattern-card.svg');
+      background-size: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .profile-icon {
+      margin-top: -50px;
+      border-radius: 100px;
+      border: 5px solid white;
+    }
+
+    .profile-information {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-information header {
+      margin: 10px;
+    }
+
+    .name {
+      font-weight: 700;
+      margin-right: 5px;
+    }
+
+    .location {
+      font-size: 14px;
+      color: hsl(0, 0%, 59%);
+    }
+
+    .age,
+    .stat-subtext {
+      color: hsl(0, 0%, 59%);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 25px;
+      border-top: thin solid hsla(0, 2%, 55%, .3);
+      margin-top: 30px;
+    }
+
+    .stat-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stat-header {
+      font-weight: 700;
+      padding: 5px;
+    }
+
+    .stat-subtext {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .attribution {
+      display: none;
+      margin-top: 20px;
+      font-size: 11px;
+      color: white;
+    }
+
+    .attribution a {
+      color: white;
+    }
   </style>
 </head>
+
 <body>
-  Victor Crest
-  26
-  London
+  <main>
+    <div class="profile-card">
+      <div class="profile-header-image">
 
-  80K
-  Followers
+      </div>
+      <img src="images/image-victor.jpg" alt="Profile image for Victor Crest" class="profile-icon">
+      <div class="profile-information">
+        <header>
+          <span class="name">Victor Crest</span>
+          <span class="age">26</span>
 
-  803K
-  Likes
+        </header>
+        <span class="location">London</span>
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+        <div class="stats">
+          <div class="stat-column">
+            <span class="stat-header">80K</span>
+            <span class="stat-subtext">Followers</span>
+
+          </div>
+          <div class="stat-column">
+            <span class="stat-header">803K</span>
+            <span class="stat-subtext">Likes</span>
+
+          </div>
+          <div class="stat-column">
+            <span class="stat-header">1.4K</span>
+            <span class="stat-subtext">Photos</span>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">curricle</a>.
+    </div>
+
+  </main>
 </body>
+
 </html>
