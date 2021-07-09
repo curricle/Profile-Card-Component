@@ -56,4 +56,4 @@ I learned about using multiple background images on one element and positioning 
 
 ## Acknowledgments
 
-Thanks Kaybee for continuing to spur me on in doing these, and Demian in the Frontend Mentor Slack for the tip on the appropriate values for the background positioning.
+Thanks Kaybee for continuing to spur me on in doing these, and Demian in the Frontend Mentor Slack for the tip on the appropriate values/syntax for the background positioning.
